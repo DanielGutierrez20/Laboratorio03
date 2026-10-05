@@ -44,6 +44,35 @@ public class Program
             }
         }
     }
+
+    static void EjecutarEtapa2()
+    {
+        Console.WriteLine("--- ETAPA 2: MATRIZ 3x3 ---\n");
+        int[,] matriz = new int[3, 3];
+        int sumaTotal = 0;
+
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                Console.Write($"Ingrese valor para la posición [{i},{j}]: ");
+                int.TryParse(Console.ReadLine(), out matriz[i, j]);
+            }
+        }
+
+        Console.WriteLine("\nMatriz ingresada:");
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                Console.Write($"{matriz[i, j]}\t");
+                sumaTotal += matriz[i, j];
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine($"\nLa suma total de los elementos es: {sumaTotal}");
+    }
+
 	public static void Main()
 	{
         int opcion;
@@ -70,7 +99,7 @@ public class Program
                         EjecutarEtapa1();
                         break;
                     case 2:
-                        //EjecutarEtapa2();
+                        EjecutarEtapa2();
                         break;
                     case 3:
                         //EjecutarEtapa3();

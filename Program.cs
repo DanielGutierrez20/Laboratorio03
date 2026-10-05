@@ -73,6 +73,66 @@ public class Program
         Console.WriteLine($"\nLa suma total de los elementos es: {sumaTotal}");
     }
 
+    static void EjecutarEtapa3()
+    {
+        List<int> lista = new List<int>();
+        int subOpcion;
+
+        do
+        {
+            Console.WriteLine("\n--- ETAPA 3: OPERACIONES SOBRE LISTA ---");
+            Console.WriteLine("1. Insertar elemento");
+            Console.WriteLine("2. Eliminar elemento por posición");
+            Console.WriteLine("3. Buscar valor y mostrar posición");
+            Console.WriteLine("4. Mostrar lista actualizada");
+            Console.WriteLine("5. Regresar al menú principal");
+            Console.Write("Seleccione una opción: ");
+            int.TryParse(Console.ReadLine(), out subOpcion);
+
+            switch (subOpcion)
+            {
+                case 1:
+                    Console.Write("Ingrese valor a insertar: ");
+                    if (int.TryParse(Console.ReadLine(), out int valAdd))
+                    {
+                        lista.Add(valAdd);
+                        Console.WriteLine("Elemento agregado.");
+                    }
+                    break;
+                case 2:
+                    Console.Write("Ingrese posición a eliminar: ");
+                    if (int.TryParse(Console.ReadLine(), out int pos) && pos >= 0 && pos < lista.Count)
+                    {
+                        lista.RemoveAt(pos);
+                        Console.WriteLine("Elemento eliminado.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Posición no válida.");
+                    }
+                    break;
+                case 3:
+                    Console.Write("Ingrese valor a buscar: ");
+                    if (int.TryParse(Console.ReadLine(), out int valBus))
+                    {
+                        int idx = lista.IndexOf(valBus);
+                        if (idx != -1)
+                            Console.WriteLine($"El valor está en la posición [{idx}].");
+                        else
+                        Console.WriteLine("Valor no encontrado.");
+                    }
+                    break;
+                case 4:
+                    Console.WriteLine("\nLista actual:");
+                    if (lista.Count == 0) Console.WriteLine("[Vacía]");
+                    else
+                        for (int i = 0; i < lista.Count; i++)
+                        Console.WriteLine($"[{i}]: {lista[i]}");
+                    break;
+            }
+        } while (subOpcion != 5);
+    }
+
 	public static void Main()
 	{
         int opcion;
@@ -102,7 +162,7 @@ public class Program
                         EjecutarEtapa2();
                         break;
                     case 3:
-                        //EjecutarEtapa3();
+                        EjecutarEtapa3();
                         break;
                     case 4:
                         //EjecutarEtapa4();

@@ -1,0 +1,14 @@
+F:\Lab03\arreglos\bin\Debug\net9.0\arreglos.exe
+F:\Lab03\arreglos\bin\Debug\net9.0\arreglos.deps.json
+F:\Lab03\arreglos\bin\Debug\net9.0\arreglos.runtimeconfig.json
+F:\Lab03\arreglos\bin\Debug\net9.0\arreglos.dll
+F:\Lab03\arreglos\bin\Debug\net9.0\arreglos.pdb
+F:\Lab03\arreglos\obj\Debug\net9.0\arreglos.GeneratedMSBuildEditorConfig.editorconfig
+F:\Lab03\arreglos\obj\Debug\net9.0\arreglos.AssemblyInfoInputs.cache
+F:\Lab03\arreglos\obj\Debug\net9.0\arreglos.AssemblyInfo.cs
+F:\Lab03\arreglos\obj\Debug\net9.0\arreglos.csproj.CoreCompileInputs.cache
+F:\Lab03\arreglos\obj\Debug\net9.0\arreglos.dll
+F:\Lab03\arreglos\obj\Debug\net9.0\refint\arreglos.dll
+F:\Lab03\arreglos\obj\Debug\net9.0\arreglos.pdb
+F:\Lab03\arreglos\obj\Debug\net9.0\arreglos.genruntimeconfig.cache
+F:\Lab03\arreglos\obj\Debug\net9.0\ref\arreglos.dll

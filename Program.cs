@@ -133,6 +133,59 @@ public class Program
         } while (subOpcion != 5);
     }
 
+    static void EjecutarEtapa4()
+    {
+        Console.WriteLine("--- ETAPA 4: ALGORITMOS DE ORDENAMIENTO ---\n");
+        int[] datosOriginales = { 64, 25, 12, 22, 11, 90, 45, 33 };
+
+        int[] datosBurbuja = (int[])datosOriginales.Clone();
+        int[] datosSeleccion = (int[])datosOriginales.Clone();
+
+        Console.WriteLine("1. ORDENAMIENTO POR BURBUJA");
+        Console.WriteLine("Antes:   [" + string.Join(", ", datosBurbuja) + "]");
+        OrdenamientoBurbuja(datosBurbuja);
+        Console.WriteLine("Después: [" + string.Join(", ", datosBurbuja) + "]");
+
+        Console.WriteLine("\n2. ORDENAMIENTO POR SELECCIÓN");
+        Console.WriteLine("Antes:   [" + string.Join(", ", datosSeleccion) + "]");
+        OrdenamientoSeleccion(datosSeleccion);
+        Console.WriteLine("Después: [" + string.Join(", ", datosSeleccion) + "]");
+    }
+
+    static void OrdenamientoBurbuja(int[] arr)
+    {
+        for (int i = 0; i < arr.Length - 1; i++)
+        {
+            for (int j = 0; j < arr.Length - i - 1; j++)
+            {
+                if (arr[j] > arr[j + 1])
+                {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    static void OrdenamientoSeleccion(int[] arr)
+    {
+        for (int i = 0; i < arr.Length - 1; i++)
+        {
+            int minIdx = i;
+            for (int j = i + 1; j < arr.Length; j++)
+            {
+                if (arr[j] < arr[minIdx])
+                {
+                    minIdx = j;
+                }
+            }
+            int temp = arr[minIdx];
+            arr[minIdx] = arr[i];
+            arr[i] = temp;
+        }
+    }
+
 	public static void Main()
 	{
         int opcion;
@@ -165,7 +218,7 @@ public class Program
                         EjecutarEtapa3();
                         break;
                     case 4:
-                        //EjecutarEtapa4();
+                        EjecutarEtapa4();
                         break;
                     case 5:
                         Console.WriteLine("Saliendo del programa...");
